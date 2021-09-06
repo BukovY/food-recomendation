@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { calculateMatchRatio, sortByMatchRatio } from "../../utils/functions";
 import { recipeType } from "../../interfaces/interfaces";
+import FoodCard from "../../components/FoodCard/FoodCard";
 
 const Result: FC = () => {
   // calculate ratio
@@ -19,11 +20,7 @@ const Result: FC = () => {
   return (
     <>
       {recipeToViewSorted.map((el) => (
-        <div key={el.title}>
-          <p>
-            {el.title} / {el.matchRatio}
-          </p>
-        </div>
+          <FoodCard  key={el.title} recipe={el}/>
       ))}
     </>
   );

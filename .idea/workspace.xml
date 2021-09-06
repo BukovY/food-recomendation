@@ -20,19 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f823b6b-0912-46a3-90b7-a99e11df05bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Result/Result.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/SelectFood/SelectFood.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/interfaces.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/userData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/userDataReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/functions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FoodCard/FoodCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/LinearProgress/LinearProgress.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/baseReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/baseReducers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Result/Result.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Result/Result.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/SelectFood/SelectFood.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/SelectFood/SelectFood.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +86,7 @@
       <updated>1630920959633</updated>
       <workItem from="1630920961156" duration="228000" />
       <workItem from="1630926068555" duration="3075000" />
-      <workItem from="1630950055582" duration="6495000" />
+      <workItem from="1630950055582" duration="10011000" />
     </task>
     <servers />
   </component>
