@@ -20,11 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f823b6b-0912-46a3-90b7-a99e11df05bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/base/breakfasts..ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/baseReducers.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Result/Result.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/SelectFood/SelectFood.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/interfaces.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/actions/userData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/reducers/userDataReducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/functions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/baseReducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/baseReducers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +42,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -55,7 +65,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Homework-task" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -65,6 +75,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\zoroo\Documents\GitHub\food-recomendation\node_modules\prettier" />
     <property name="ts.external.directory.path" value="C:\Users\zoroo\Documents\GitHub\food-recomendation\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zoroo\Documents\GitHub\food-recomendation\src\components\Ingredient" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -77,7 +92,8 @@
       <option name="presentableId" value="Default" />
       <updated>1630920959633</updated>
       <workItem from="1630920961156" duration="228000" />
-      <workItem from="1630926068555" duration="2702000" />
+      <workItem from="1630926068555" duration="3075000" />
+      <workItem from="1630950055582" duration="6495000" />
     </task>
     <servers />
   </component>
@@ -100,9 +116,13 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="586" y="295" key="FileChooserDialogImpl" timestamp="1630921187637">
+    <state x="536" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1630955841065">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="586" y="295" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1630921187637" />
+    <state x="536" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1630955841065" />
+    <state x="586" y="295" key="FileChooserDialogImpl" timestamp="1630953019187">
+      <screen x="0" y="0" width="2560" height="1080" />
+    </state>
+    <state x="586" y="295" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1630953019187" />
   </component>
 </project>
