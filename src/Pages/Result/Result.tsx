@@ -4,15 +4,13 @@ import { RootState } from "../../redux/store";
 import { calculateMatchRatio, sortByMatchRatio, excludeByIngredients } from "../../utils/functions";
 import { recipeType } from "../../interfaces/interfaces";
 import FoodCard from "../../components/FoodCard/FoodCard";
+import {base} from "../../base/base.";
 
 const Result: FC = () => {
-  // calculate ratio
-  // sort bu ratio
-  // pagination view
-  const { data } = useSelector((state: RootState) => state.base);
+
   const { hasIngredients, excludingIngredients } = useSelector((state: RootState) => state.userData);
   let recipeToView: Array<recipeType> = [];
-  for (let i of data.breakfasts) {
+  for (let i of base) {
     recipeToView.push(calculateMatchRatio(i, hasIngredients));
   }
   if(excludingIngredients.length !== 0){
@@ -23,7 +21,7 @@ const Result: FC = () => {
   return (
     <>
       {recipeToViewSorted.map((el) => (
-          <FoodCard  key={el.title} recipe={el}/>
+          <FoodCard  key={el.id} recipe={el}/>
       ))}
     </>
   );

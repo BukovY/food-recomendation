@@ -2,6 +2,10 @@ const getTags =
   '<button id="getTags" style="position: fixed; top: 0px; left: 5vw; z-index: 50000;background-color: white;padding: 10px 10px;font-size: 16px;color: black;">Получить заголовки</button>';
 jQuery("body").append(getTags);
 
+
+appendSelect('hours', 50, [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]);
+appendSelect('minutes', 100, [0,5,10,15,20,25,30,35,40,45,50,55]);
+
 jQuery("#getTags").click(function () {
   let obg = {
     id: Math.random().toString(36).substring(7),
@@ -15,7 +19,7 @@ jQuery("#getTags").click(function () {
     category: getStringFromItemPropArr("itemListElement"),
     link: window.location.href,
     ingredients: getStringFromItemPropArr("recipeIngredient"),
-    time: parseInt(getStringFromItemProp("cookTime")),
+    time: getTimeFormSelect(jQuery('#hours option:selected').text(),jQuery('#minutes option:selected').text()),
     steps: getRecipeSteps(),
     matchRatio: 0,
   };
@@ -79,4 +83,18 @@ function cutStep(str) {
     str = str.slice(0, endIndex);
   }
   return str.slice(2);
+}
+
+/// for select time
+function appendSelect(id, px, array) {
+    var string = '<select id="' + id + '" style="position: fixed; top: +' + px + 'px; left: 5vw; z-index: 50000;background-color: white;padding: 10px 10px;font-size: 16px;color: black;">'
+    for (let i of array) {
+        string += '<option>' + i + '</option>'
+    }
+    string += '</select>'
+    jQuery('body').append(string);
+}
+
+function getTimeFormSelect(hour, min){
+return parseInt(hour)*60+parseInt(min)
 }
