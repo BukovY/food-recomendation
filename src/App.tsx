@@ -5,8 +5,10 @@ import { Route, Switch } from "react-router";
 import Typography from "@material-ui/core/Typography";
 import { NavLink } from "react-router-dom";
 import SelectFood from "./Pages/SelectFood/SelectFood";
-import Result from "./Pages/Result/Result";
 import Header from "./components/Header/Header";
+import HomePage from "./Pages/HomePage/HomePage";
+import FavoritePage from "./Pages/FavoritePage/FavoritePage";
+import CookPage from "./Pages/CookPage/CookPage";
 
 function App() {
   return (
@@ -15,10 +17,13 @@ function App() {
       <Container>
         <Switch>
           <Route path="/" exact>
-            <SelectFood />
+            <HomePage/>
           </Route>
-          <Route path="/result" exact>
-            <Result />
+          <Route path="/favorite" exact>
+            <FavoritePage/>
+          </Route>
+          <Route path="/cook" exact>
+            <CookPage/>
           </Route>
           <Route>
             <Typography variant="h1">Страница не найдена</Typography>

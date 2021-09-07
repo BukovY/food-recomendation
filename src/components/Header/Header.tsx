@@ -14,6 +14,8 @@ import KitchenIcon from "@material-ui/icons/Kitchen";
 
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
+import { setPagination } from "../../redux/actions/userData";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -36,8 +38,10 @@ const Header: FC = () => {
   const classes = useStyles();
 
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const selectPath = (str: string) => {
+    dispatch(setPagination(1));
     history.push(str);
   };
 

@@ -20,10 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f823b6b-0912-46a3-90b7-a99e11df05bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/FavoritePage/FavoritePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/HomePage/HomePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PaginationList/PaginationList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/RecipesList/RecipesList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FoodCard/FoodCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FoodCard/FoodCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Result/Result.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/base..ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/base..ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/actions/userData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/userData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/userDataReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/userDataReducer.ts" afterDir="false" />
@@ -88,7 +95,7 @@
       <workItem from="1630920961156" duration="228000" />
       <workItem from="1630926068555" duration="3075000" />
       <workItem from="1630950055582" duration="10175000" />
-      <workItem from="1631004755624" duration="15856000" />
+      <workItem from="1631004755624" duration="19093000" />
     </task>
     <servers />
   </component>

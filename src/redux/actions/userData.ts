@@ -5,6 +5,7 @@ import {
   SET_TO_BUY,
   SET_FAVORITE,
   SET_COOK,
+  SET_PAGINATION,
 } from "../constants";
 
 export const changeProduct = createAction<string>(CHANGE_PRODUCT);
@@ -12,3 +13,4 @@ export const setExcludingProduct = createAction<string>(SET_EXCLUDING_PRODUCT);
 export const setToBuy = createAction<string>(SET_TO_BUY);
 export const setFavorite = createAction<string>(SET_FAVORITE);
 export const setCook = createAction<string>(SET_COOK);
+export const setPagination = createAction<number>(SET_PAGINATION);

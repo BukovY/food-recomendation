@@ -3,3 +3,4 @@ export const SET_EXCLUDING_PRODUCT = "SET_EXCLUDING_PRODUCT";
 export const SET_TO_BUY = "SET_TO_BUY";
 export const SET_FAVORITE = "SET_FAVORITE";
 export const SET_COOK = "SET_COOK";
+export const SET_PAGINATION = "SET_PAGINATION";
