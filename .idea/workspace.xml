@@ -20,14 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f823b6b-0912-46a3-90b7-a99e11df05bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CookSteps/CookSteps.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/!Tools/ChromeExtensionForParse/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/!Tools/ChromeExtensionForParse/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/!Tools/ChromeExtensionForParse/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/!Tools/ChromeExtensionForParse/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FoodCard/FoodCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FoodCard/FoodCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/userData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/userData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/userDataReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/userDataReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/functions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/breakfasts..ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/breakfasts..ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +87,7 @@
       <workItem from="1630920961156" duration="228000" />
       <workItem from="1630926068555" duration="3075000" />
       <workItem from="1630950055582" duration="10175000" />
-      <workItem from="1631004755624" duration="5577000" />
+      <workItem from="1631004755624" duration="9099000" />
     </task>
     <servers />
   </component>
