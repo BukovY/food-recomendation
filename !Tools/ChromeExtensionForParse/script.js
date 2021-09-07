@@ -15,11 +15,10 @@ jQuery("#getTags").click(function () {
     category: getStringFromItemPropArr("itemListElement"),
     link: window.location.href,
     ingredients: getStringFromItemPropArr("recipeIngredient"),
-    time: 15,
+    time: parseInt(getStringFromItemProp("cookTime")),
     steps: getRecipeSteps(),
     matchRatio: 0,
   };
-
   copyToClipboard(JSON.stringify(obg));
 });
 
