@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { recipeType } from "../../interfaces/interfaces";
 import {
   CHANGE_PRODUCT,
   SET_COOK,

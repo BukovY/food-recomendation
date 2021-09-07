@@ -33,7 +33,7 @@ const RecipesList: FC<recipesListType> = ({ base }) => {
           handler={changePaginationPage}
         />
       )}
-      {recipesToView.length == 0 && (
+      {recipesToView.length === 0 && (
         <Box>
           <Typography variant="h2">Рецептов для показа нет</Typography>
           <Typography variant="h3">

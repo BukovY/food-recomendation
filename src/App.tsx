@@ -4,7 +4,6 @@ import { Container } from "@material-ui/core";
 import { Route, Switch } from "react-router";
 import Typography from "@material-ui/core/Typography";
 import { NavLink } from "react-router-dom";
-import SelectFood from "./Pages/SelectFood/SelectFood";
 import Header from "./components/Header/Header";
 import HomePage from "./Pages/HomePage/HomePage";
 import FavoritePage from "./Pages/FavoritePage/FavoritePage";
@@ -17,13 +16,13 @@ function App() {
       <Container>
         <Switch>
           <Route path="/" exact>
-            <HomePage/>
+            <HomePage />
           </Route>
           <Route path="/favorite" exact>
-            <FavoritePage/>
+            <FavoritePage />
           </Route>
           <Route path="/cook" exact>
-            <CookPage/>
+            <CookPage />
           </Route>
           <Route>
             <Typography variant="h1">Страница не найдена</Typography>
