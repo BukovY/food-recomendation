@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { recipeType } from "../../interfaces/interfaces";
 import {
   CHANGE_PRODUCT,
+  SET_COOK,
   SET_EXCLUDING_PRODUCT,
   SET_FAVORITE,
   SET_TO_BUY,
@@ -13,12 +14,14 @@ type userDataStateType = {
   excludingIngredients: Array<string>;
   toBuy: Array<string>;
   favoriteFood: Array<string>;
+  toCook: Array<string>;
 };
 const initialState: userDataStateType = {
   hasIngredients: [],
   excludingIngredients: [],
   toBuy: [],
   favoriteFood: [],
+  toCook: [],
 };
 
 const userData = createSlice({
@@ -47,6 +50,9 @@ const userData = createSlice({
           state.favoriteFood,
           action.payload
         );
+      })
+      .addCase(SET_COOK, (state, action: any) => {
+        state.toCook = changeIngredientArray(state.toCook, action.payload);
       });
   },
 });

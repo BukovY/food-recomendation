@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { Box } from "@material-ui/core";
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import Ingredient from "../Ingredient/Ingredient";
 import AccessAlarmsIcon from "@material-ui/icons/AccessAlarms";
@@ -15,7 +15,7 @@ import { minToTime } from "../../utils/functions";
 import CookSteps from "../CookSteps/CookSteps";
 import NutritionBlock from "../NutritionBlock/NutritionBlock";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import {setFavorite} from "../../redux/actions/userData";
+import { setCook, setFavorite } from "../../redux/actions/userData";
 
 type FoodCardType = {
   recipe: recipeType;
@@ -62,14 +62,18 @@ const useStyles = makeStyles(() => ({
     },
   },
   buttonsFooter: {
-    display: "flex",
-    justifyContent: "center",
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gridGap: "10px",
+  },
+  buttonToRecipe: {
+    width: "100%",
   },
 }));
 
 const FoodCard: FC<FoodCardType> = ({ recipe }) => {
   const classes = useStyles();
-  const { hasIngredients, favoriteFood } = useSelector(
+  const { hasIngredients, favoriteFood, toCook } = useSelector(
     (state: RootState) => state.userData
   );
 
@@ -85,7 +89,8 @@ const FoodCard: FC<FoodCardType> = ({ recipe }) => {
     }
   }
   const isFavorite = favoriteFood.indexOf(recipe.id) !== -1;
-  const dispatch = useDispatch()
+  const isCook = toCook.indexOf(recipe.id) !== -1;
+  const dispatch = useDispatch();
   return (
     <Box className={classes.box}>
       <Card variant="outlined">
@@ -95,7 +100,7 @@ const FoodCard: FC<FoodCardType> = ({ recipe }) => {
               className={classes.favoriteIcon}
               fontSize="large"
               color={isFavorite ? "secondary" : "disabled"}
-              onClick={()=> dispatch(setFavorite(recipe.id))}
+              onClick={() => dispatch(setFavorite(recipe.id))}
             />
             <Typography variant="h4">{recipe.title}</Typography>
             <Box className={classes.timeBox}>
@@ -132,8 +137,15 @@ const FoodCard: FC<FoodCardType> = ({ recipe }) => {
           <br />
           <CookSteps steps={recipe.steps} />
           <Box className={classes.buttonsFooter}>
+            <Button
+              color={isCook ? "secondary" : "primary"}
+              variant="contained"
+              onClick={() => dispatch(setCook(recipe.id))}
+            >
+              {isCook ? "Не готовить" : "Готовить"}
+            </Button>
             <a href={recipe.link} target="_blank" rel="noreferrer">
-              <Button size="small" variant="contained">
+              <Button variant="contained" className={classes.buttonToRecipe}>
                 К рецепту на сайте
               </Button>
             </a>
