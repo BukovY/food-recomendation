@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f823b6b-0912-46a3-90b7-a99e11df05bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/CookSteps/CookSteps.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Result/Result.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Result/Result.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FoodCard/FoodCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FoodCard/FoodCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/actions/userData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/userData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants.ts" afterDir="false" />
@@ -59,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Homework-task" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -88,7 +89,7 @@
       <workItem from="1630920961156" duration="228000" />
       <workItem from="1630926068555" duration="3075000" />
       <workItem from="1630950055582" duration="10175000" />
-      <workItem from="1631004755624" duration="1904000" />
+      <workItem from="1631004755624" duration="5577000" />
     </task>
     <servers />
   </component>
@@ -115,9 +116,9 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="536" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1630955841065" />
-    <state x="586" y="295" key="FileChooserDialogImpl" timestamp="1630953019187">
+    <state x="586" y="295" key="FileChooserDialogImpl" timestamp="1631011721108">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="586" y="295" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1630953019187" />
+    <state x="586" y="295" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1631011721108" />
   </component>
 </project>

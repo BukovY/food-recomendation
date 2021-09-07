@@ -9,6 +9,10 @@ import { Box } from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import Ingredient from "../Ingredient/Ingredient";
+import AccessAlarmsIcon from "@material-ui/icons/AccessAlarms";
+import { makeStyles } from "@material-ui/core/styles";
+import { minToTime } from "../../utils/functions";
+import CookSteps from "../CookSteps/CookSteps";
 
 type FoodCardType = {
   recipe: recipeType;
@@ -17,7 +21,45 @@ type IngredientsType = {
   available: Array<string>;
   need: Array<string>;
 };
+
+const useStyles = makeStyles(() => ({
+  header: {
+    display: "flex",
+  },
+  alignText: {
+    textAlign: "center",
+    fontSize: '24px'
+  },
+  timeBox: {
+    display: "flex",
+    alignItems: "center",
+    marginLeft: "10px",
+  },
+  box: {
+    marginBottom: "10px",
+    marginTop: "5px",
+  },
+  progress: {
+    display: "grid",
+    gridTemplateColumns: "1fr 50px",
+    alignItems: "center",
+  },
+  cardIngredients: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gridGap: "10px",
+    "@media screen and (max-width: 1200px)": {
+      gridTemplateColumns: "1fr",
+    },
+  },
+  buttonsFooter: {
+    display: "flex",
+    justifyContent: "center",
+  },
+}));
+
 const FoodCard: FC<FoodCardType> = ({ recipe }) => {
+  const classes = useStyles();
   const { hasIngredients } = useSelector((state: RootState) => state.userData);
 
   let ingredient: IngredientsType = {
@@ -32,40 +74,48 @@ const FoodCard: FC<FoodCardType> = ({ recipe }) => {
     }
   }
   return (
-    <Box marginBottom="10px" marginTop="5px">
+    <Box className={classes.box}>
       <Card variant="outlined">
         <CardContent>
-          <Typography variant="h4">{recipe.title}</Typography>
-          <Box
-            display="grid"
-            gridTemplateColumns="1fr 50px"
-            alignItems="center"
-          >
+          <Box className={classes.header}>
+            <Typography variant="h4">{recipe.title}</Typography>
+            <Box className={classes.timeBox}>
+              <AccessAlarmsIcon fontSize="large" />
+              <Typography variant="body1">{minToTime(recipe.time)}</Typography>
+            </Box>
+          </Box>
+
+          <Box className={classes.progress}>
             <LinearProgress
               value={recipe.matchRatio * 100}
               variant="determinate"
             />
             <Typography variant="body1">{recipe.matchRatio * 100}%</Typography>
           </Box>
-          <Box display="grid" gridTemplateColumns="1fr 1fr" gridGap="10px">
+          <Box className={classes.cardIngredients}>
             <Box>
-              <Typography variant="body1">Нужно купить</Typography>
+              <Typography variant="body1" className={classes.alignText}>
+                Нужно купить
+              </Typography>
               {ingredient.need.map((el) => (
-                <Ingredient ingredient={el} key={el}/>
+                <Ingredient ingredient={el} key={el} />
               ))}
             </Box>
             <Box>
-              <Typography variant="body1">Доступно</Typography>
+              <Typography variant="body1" className={classes.alignText}>
+                Доступно
+              </Typography>
               {ingredient.available.map((el) => (
-                <Ingredient ingredient={el} key={el}/>
+                <Ingredient ingredient={el} key={el} />
               ))}
             </Box>
           </Box>
           <br />
-          <Box display="flex" justifyContent="center">
+          <CookSteps steps={recipe.steps} />
+          <Box className={classes.buttonsFooter}>
             <a href={recipe.link} target="_blank" rel="noreferrer">
               <Button size="small" variant="contained">
-                Подробнее
+                К рецепту на сайте
               </Button>
             </a>
           </Box>

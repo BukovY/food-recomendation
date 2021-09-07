@@ -1,2 +1,3 @@
 export const CHANGE_PRODUCT = "CHANGE_PRODUCT";
 export const SET_EXCLUDING_PRODUCT = "SET_EXCLUDING_PRODUCT";
+export const SET_TO_BUY = "SET_TO_BUY";
