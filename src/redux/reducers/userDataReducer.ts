@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
   CHANGE_PRODUCT,
+  RESTORE_DEFAULT_BY_KEY,
   SET_COOK,
   SET_EXCLUDING_PRODUCT,
   SET_FAVORITE,
@@ -37,6 +38,12 @@ const userData = createSlice({
           state.hasIngredients,
           action.payload
         );
+        if (
+          state.toBuy.indexOf(action.payload) !== -1 &&
+          state.hasIngredients.indexOf(action.payload) !== -1
+        ) {
+          state.toBuy = state.toBuy.filter((el) => el !== action.payload);
+        }
         state.paginationPage = 1;
       })
       .addCase(SET_EXCLUDING_PRODUCT, (state, action: any) => {
@@ -63,6 +70,25 @@ const userData = createSlice({
       })
       .addCase(SET_PAGINATION, (state, action: any) => {
         state.paginationPage = action.payload;
+      })
+      .addCase(RESTORE_DEFAULT_BY_KEY, (state, action: any) => {
+        switch (action.payload) {
+          case "hasIngredients":
+            state.hasIngredients = [];
+            break;
+          case "excludingIngredients":
+            state.excludingIngredients = [];
+            break;
+          case "toBuy":
+            state.toBuy = [];
+            break;
+          case "favoriteFood":
+            state.favoriteFood = [];
+            break;
+          case "toCook":
+            state.toCook = [];
+            break;
+        }
       });
   },
 });

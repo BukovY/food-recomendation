@@ -6,7 +6,7 @@ import { Box } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import { base } from "../../base/base.";
 
-const SelectFood: FC = () => {
+const IngredientsPage: FC = () => {
   return (
     <>
       {getProductList(base).map((el) => (
@@ -22,4 +22,4 @@ const SelectFood: FC = () => {
     </>
   );
 };
-export default SelectFood;
+export default IngredientsPage;

@@ -7,11 +7,21 @@ import FoodCard from "../FoodCard/FoodCard";
 import { PaginationList } from "../PaginationList/PaginationList";
 import { setPagination } from "../../redux/actions/userData";
 import Typography from "@material-ui/core/Typography";
+import {makeStyles} from "@material-ui/core/styles";
 
 type recipesListType = {
   base: Array<recipeType>;
 };
+
+const useStyles = makeStyles(() => ({
+  textAlign: {
+    textAlign: "center",
+    marginBottom: "10px",
+  },
+}));
+
 const RecipesList: FC<recipesListType> = ({ base }) => {
+  const classes = useStyles();
   const { paginationPage } = useSelector((state: RootState) => state.userData);
   const startSlice = (paginationPage - 1) * 5;
   const endSlice =
@@ -35,8 +45,8 @@ const RecipesList: FC<recipesListType> = ({ base }) => {
       )}
       {recipesToView.length === 0 && (
         <Box>
-          <Typography variant="h2">Рецептов для показа нет</Typography>
-          <Typography variant="h3">
+          <Typography variant="h2" className={classes.textAlign}>Рецептов для показа нет</Typography>
+          <Typography variant="h3" className={classes.textAlign}>
             Смените настройки или перейдите на главную
           </Typography>
         </Box>

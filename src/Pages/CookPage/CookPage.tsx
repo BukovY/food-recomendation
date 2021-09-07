@@ -3,13 +3,18 @@ import { base } from "../../base/base.";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import RecipesList from "../../components/RecipesList/RecipesList";
+import { filterRecipesByInclude } from "../../utils/functions";
 
 const CookPage: FC = () => {
-  const { toCook } = useSelector((state: RootState) => state.userData);
-  const recipesToView = base.filter((el) => toCook.indexOf(el.id) !== -1);
+  const { toCook, hasIngredients } = useSelector(
+    (state: RootState) => state.userData
+  );
+
   return (
     <>
-      <RecipesList base={recipesToView} />
+      <RecipesList
+        base={filterRecipesByInclude(base, toCook, hasIngredients)}
+      />
     </>
   );
 };

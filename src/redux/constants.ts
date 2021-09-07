@@ -4,3 +4,4 @@ export const SET_TO_BUY = "SET_TO_BUY";
 export const SET_FAVORITE = "SET_FAVORITE";
 export const SET_COOK = "SET_COOK";
 export const SET_PAGINATION = "SET_PAGINATION";
+export const RESTORE_DEFAULT_BY_KEY = "RESTORE_DEFAULT_BY_KEY";

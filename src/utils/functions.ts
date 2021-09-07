@@ -63,3 +63,15 @@ export const minToTime = (num: number) => {
   return hour + ":" + min;
 };
 
+export const filterRecipesByInclude = (
+  base: Array<recipeType>,
+  arr: Array<string>,
+  hasIngredients: Array<string>
+) => {
+  const recipesFilter = base.filter((el) => arr.indexOf(el.id) !== -1);
+  let recipeToView: Array<recipeType> = [];
+  for (let i of recipesFilter) {
+    recipeToView.push(calculateMatchRatio(i, hasIngredients));
+  }
+  return recipeToView;
+};
