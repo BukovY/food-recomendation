@@ -17,9 +17,36 @@ export const calculateMatchRatio = (
       matchedPosition++;
     }
   }
-  const calculatedMatch = Number((matchedPosition / recipe.ingredients.length).toFixed(2))
-  return {...recipe, matchRatio:calculatedMatch}
+  const calculatedMatch = Number(
+    (matchedPosition / recipe.ingredients.length).toFixed(2)
+  );
+  return { ...recipe, matchRatio: calculatedMatch };
 };
-export const sortByMatchRatio = (arrRecipe:Array<recipeType>) => {
-    return arrRecipe.sort((a,b) =>  b.matchRatio - a.matchRatio)
-}
+export const sortByMatchRatio = (arrRecipe: Array<recipeType>) => {
+  return arrRecipe.sort((a, b) => b.matchRatio - a.matchRatio);
+};
+export const changeIngredientArray = (
+  arr: Array<string>,
+  ingredient: string
+) => {
+  if (arr.indexOf(ingredient) === -1) {
+    arr.push(ingredient);
+  } else {
+    arr = arr.filter((el) => el !== ingredient);
+  }
+  return arr;
+};
+export const excludeByIngredients = (
+  arr: Array<recipeType>,
+  exclude: Array<string>
+) => {
+  const isExclude = (recipe: recipeType, exclArr: Array<string>) => {
+    for (let i of exclArr) {
+      if (recipe.ingredients.indexOf(i) !== -1) {
+        return false;
+      }
+    }
+    return true;
+  };
+  return arr.filter((el) => isExclude(el, exclude));
+};

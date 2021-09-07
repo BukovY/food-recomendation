@@ -1,16 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { recipeType } from "../../interfaces/interfaces";
-import { CHANGE_PRODUCT } from "../constants";
+import { CHANGE_PRODUCT, SET_EXCLUDING_PRODUCT } from "../constants";
+import {changeIngredientArray} from "../../utils/functions";
 
 type userDataStateType = {
   hasIngredients: Array<string>;
   selectedFood: Array<recipeType>;
   favoriteFood: Array<string>;
+  excludingIngredients: Array<string>;
 };
 const initialState: userDataStateType = {
   hasIngredients: [],
   selectedFood: [],
   favoriteFood: [],
+  excludingIngredients: [],
 };
 
 const userData = createSlice({
@@ -18,15 +21,13 @@ const userData = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(CHANGE_PRODUCT, (state, action: any) => {
-      if (state.hasIngredients.indexOf(action.payload) === -1) {
-        state.hasIngredients.push(action.payload);
-      } else {
-        state.hasIngredients = state.hasIngredients.filter(
-          (el) => el !== action.payload
-        );
-      }
-    });
+    builder
+      .addCase(CHANGE_PRODUCT, (state, action: any) => {
+        state.hasIngredients = changeIngredientArray(state.hasIngredients, action.payload)
+      })
+      .addCase(SET_EXCLUDING_PRODUCT, (state, action: any) => {
+        state.excludingIngredients = changeIngredientArray(state.excludingIngredients, action.payload)
+      });
   },
 });
 
