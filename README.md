@@ -4,6 +4,7 @@ pet project to portfolio
 to finish:
 -add combine need to by ingredients
 -save data on localstorage
+-combine select ingredient on ingredients page
 -add recipe to base
 
 
