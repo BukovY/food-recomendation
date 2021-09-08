@@ -44,29 +44,24 @@ const userData = createSlice({
         ) {
           state.toBuy = state.toBuy.filter((el) => el !== action.payload);
         }
-        state.paginationPage = 1;
       })
       .addCase(SET_EXCLUDING_PRODUCT, (state, action: any) => {
         state.excludingIngredients = changeIngredientArray(
           state.excludingIngredients,
           action.payload
         );
-        state.paginationPage = 1;
       })
       .addCase(SET_TO_BUY, (state, action: any) => {
         state.toBuy = changeIngredientArray(state.toBuy, action.payload);
-        state.paginationPage = 1;
       })
       .addCase(SET_FAVORITE, (state, action: any) => {
         state.favoriteFood = changeIngredientArray(
           state.favoriteFood,
           action.payload
         );
-        state.paginationPage = 1;
       })
       .addCase(SET_COOK, (state, action: any) => {
         state.toCook = changeIngredientArray(state.toCook, action.payload);
-        state.paginationPage = 1;
       })
       .addCase(SET_PAGINATION, (state, action: any) => {
         state.paginationPage = action.payload;

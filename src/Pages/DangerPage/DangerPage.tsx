@@ -32,7 +32,7 @@ const DangerPage: FC = () => {
         Осторожно
       </Typography>
       <Typography variant="h5" className={classes.textAlign}>
-        Кнопки сбрасывают настройки вышего приложения до стандартных
+        Кнопки сбрасывают настройки вашего приложения до стандартных
       </Typography>
       <Box className={classes.buttons}>
         <Button

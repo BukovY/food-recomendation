@@ -122,7 +122,7 @@ const FoodCard: FC<FoodCardType> = ({ recipe }) => {
                 Нужно купить
               </Typography>
               {ingredient.need.map((el) => (
-                <Ingredient ingredient={el} key={el} />
+                <Ingredient ingredient={el} key={el} isNeedUpdatePagination={true}/>
               ))}
             </Box>
             <Box>
@@ -130,7 +130,7 @@ const FoodCard: FC<FoodCardType> = ({ recipe }) => {
                 Доступно
               </Typography>
               {ingredient.available.map((el) => (
-                <Ingredient ingredient={el} key={el} />
+                <Ingredient ingredient={el} key={el} isNeedUpdatePagination={true}/>
               ))}
             </Box>
           </Box>

@@ -8,11 +8,13 @@ import {
   changeProduct,
   setExcludingProduct,
   setToBuy,
+  setPagination,
 } from "../../redux/actions/userData";
 import { makeStyles } from "@material-ui/core/styles";
 
 type IngredientType = {
   ingredient: string;
+  isNeedUpdatePagination: boolean;
 };
 
 const useStyles = makeStyles(() => ({
@@ -33,7 +35,10 @@ const useStyles = makeStyles(() => ({
     gridGap: "10px",
   },
 }));
-const Ingredient: FC<IngredientType> = ({ ingredient }) => {
+const Ingredient: FC<IngredientType> = ({
+  ingredient,
+  isNeedUpdatePagination,
+}) => {
   const classes = useStyles();
   const { hasIngredients, excludingIngredients, toBuy } = useSelector(
     (state: RootState) => state.userData
@@ -43,6 +48,25 @@ const Ingredient: FC<IngredientType> = ({ ingredient }) => {
   const isInShopList = toBuy.indexOf(ingredient) === -1;
   const dispatch = useDispatch();
 
+  const handlerChange = () => {
+    if (isNeedUpdatePagination) {
+      dispatch(setPagination(1));
+    }
+    dispatch(changeProduct(ingredient));
+  };
+  const handlerExcluding = () => {
+    if (isNeedUpdatePagination) {
+      dispatch(setPagination(1));
+    }
+    dispatch(setExcludingProduct(ingredient));
+  };
+  const handlerBuy = () => {
+    if (isNeedUpdatePagination) {
+      dispatch(setPagination(1));
+    }
+    dispatch(setToBuy(ingredient));
+  };
+
   return (
     <Box className={classes.box}>
       <Typography variant="body1">{ingredient}</Typography>
@@ -51,14 +75,14 @@ const Ingredient: FC<IngredientType> = ({ ingredient }) => {
         <Button
           variant="contained"
           color={isSelected ? "primary" : "secondary"}
-          onClick={() => dispatch(changeProduct(ingredient))}
+          onClick={handlerChange}
         >
           {isSelected ? "✓" : "❌"}
         </Button>
         <Button
           variant="contained"
           color={isExclude ? "primary" : "secondary"}
-          onClick={() => dispatch(setExcludingProduct(ingredient))}
+          onClick={handlerExcluding}
         >
           {isExclude ? "Исключить" : "Включить"}
         </Button>
@@ -66,7 +90,7 @@ const Ingredient: FC<IngredientType> = ({ ingredient }) => {
           <Button
             variant="contained"
             color={isInShopList ? "primary" : "secondary"}
-            onClick={() => dispatch(setToBuy(ingredient))}
+            onClick={handlerBuy}
           >
             {isInShopList ? "К покупкам" : "Убрать из покупок"}
           </Button>

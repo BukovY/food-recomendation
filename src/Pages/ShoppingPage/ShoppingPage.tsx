@@ -5,6 +5,7 @@ import { RootState } from "../../redux/store";
 import { Box } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import IngredientList from "../../components/IngredientList/IngredientList";
 
 const useStyles = makeStyles(() => ({
   textAlign: {
@@ -19,8 +20,7 @@ const ShoppingPage: FC = () => {
 
   return (
     <>
-      {toBuy.length !== 0 &&
-        toBuy.map((el) => <Ingredient key={el} ingredient={el} />)}
+      {toBuy.length !== 0 && <IngredientList base={toBuy} />}
       {toBuy.length === 0 && (
         <Box>
           <Typography variant="h2" className={classes.textAlign}>
