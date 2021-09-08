@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f823b6b-0912-46a3-90b7-a99e11df05bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/base/categories/salaty.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/categories/zavtraki.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/base..ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/base..ts" afterDir="false" />
-    </list>
+    <list default="true" id="0f823b6b-0912-46a3-90b7-a99e11df05bd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +83,7 @@
       <workItem from="1631004755624" duration="23127000" />
       <workItem from="1631079921873" duration="841000" />
       <workItem from="1631093336725" duration="6417000" />
-      <workItem from="1631124799783" duration="5745000" />
+      <workItem from="1631124799783" duration="6172000" />
     </task>
     <servers />
   </component>

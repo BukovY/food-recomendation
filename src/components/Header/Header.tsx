@@ -18,12 +18,13 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       flexGrow: 1,
       justifyContent: "space-between",
+      padding: "0px",
     },
     header: {
       marginBottom: "10px",
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginRight: "0px",
     },
     title: {
       flexGrow: 1,
