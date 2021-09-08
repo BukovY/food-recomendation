@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import { restoreDefaultByKey } from "../../redux/actions/userData";
 import { useDispatch } from "react-redux";
+import About from "../../components/About/About";
 
 const useStyles = makeStyles(() => ({
   buttons: {
@@ -76,6 +77,7 @@ const DangerPage: FC = () => {
           Cбросить рецепты к готовке
         </Button>
       </Box>
+      <About />
     </Box>
   );
 };
