@@ -7,6 +7,7 @@ import {
   SET_FAVORITE,
   SET_PAGINATION,
   SET_TO_BUY,
+  SET_SEARCH_VALUE,
 } from "../constants";
 import { changeIngredientArray } from "../../utils/functions";
 
@@ -17,15 +18,20 @@ type userDataStateType = {
   favoriteFood: Array<string>;
   toCook: Array<string>;
   paginationPage: number;
+  search: string;
 };
-const initialState: userDataStateType = {
-  hasIngredients: [],
-  excludingIngredients: [],
-  toBuy: [],
-  favoriteFood: [],
-  toCook: [],
-  paginationPage: 1,
-};
+const prevDate = localStorage.getItem("userData");
+const initialState: userDataStateType = prevDate
+  ? JSON.parse(prevDate)
+  : {
+      hasIngredients: [],
+      excludingIngredients: [],
+      toBuy: [],
+      favoriteFood: [],
+      toCook: [],
+      paginationPage: 1,
+      search: "",
+    };
 
 const userData = createSlice({
   name: "userData",
@@ -44,27 +50,33 @@ const userData = createSlice({
         ) {
           state.toBuy = state.toBuy.filter((el) => el !== action.payload);
         }
+        localStorage.setItem("userData", JSON.stringify(state));
       })
       .addCase(SET_EXCLUDING_PRODUCT, (state, action: any) => {
         state.excludingIngredients = changeIngredientArray(
           state.excludingIngredients,
           action.payload
         );
+        localStorage.setItem("userData", JSON.stringify(state));
       })
       .addCase(SET_TO_BUY, (state, action: any) => {
         state.toBuy = changeIngredientArray(state.toBuy, action.payload);
+        localStorage.setItem("userData", JSON.stringify(state));
       })
       .addCase(SET_FAVORITE, (state, action: any) => {
         state.favoriteFood = changeIngredientArray(
           state.favoriteFood,
           action.payload
         );
+        localStorage.setItem("userData", JSON.stringify(state));
       })
       .addCase(SET_COOK, (state, action: any) => {
         state.toCook = changeIngredientArray(state.toCook, action.payload);
+        localStorage.setItem("userData", JSON.stringify(state));
       })
       .addCase(SET_PAGINATION, (state, action: any) => {
         state.paginationPage = action.payload;
+        localStorage.setItem("userData", JSON.stringify(state));
       })
       .addCase(RESTORE_DEFAULT_BY_KEY, (state, action: any) => {
         switch (action.payload) {
@@ -84,6 +96,12 @@ const userData = createSlice({
             state.toCook = [];
             break;
         }
+        localStorage.setItem("userData", JSON.stringify(state));
+      })
+      .addCase(SET_SEARCH_VALUE, (state, action: any) => {
+        state.search = action.payload;
+        state.paginationPage = 1;
+        localStorage.setItem("userData", JSON.stringify(state));
       });
   },
 });

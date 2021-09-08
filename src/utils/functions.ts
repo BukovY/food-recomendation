@@ -75,3 +75,9 @@ export const filterRecipesByInclude = (
   }
   return recipeToView;
 };
+
+export const isInSearch = (el:string, searchTerm:string) => {
+  const element = el.toUpperCase()
+  const search = searchTerm.toUpperCase()
+  return element.indexOf(search) !== -1
+}

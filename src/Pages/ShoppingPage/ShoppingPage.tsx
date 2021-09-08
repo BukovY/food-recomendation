@@ -1,11 +1,12 @@
 import React, { FC } from "react";
-import Ingredient from "../../components/Ingredient/Ingredient";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { Box } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import IngredientList from "../../components/IngredientList/IngredientList";
+import IngredientSearch from "../../components/IngredientSearch/IngredientSearch";
+import {isInSearch} from "../../utils/functions";
 
 const useStyles = makeStyles(() => ({
   textAlign: {
@@ -16,11 +17,13 @@ const useStyles = makeStyles(() => ({
 
 const ShoppingPage: FC = () => {
   const classes = useStyles();
-  const { toBuy } = useSelector((state: RootState) => state.userData);
+  const { toBuy,search } = useSelector((state: RootState) => state.userData);
+  const productToView = toBuy.filter((el) => isInSearch(el, search));
 
   return (
     <>
-      {toBuy.length !== 0 && <IngredientList base={toBuy} />}
+      <IngredientSearch/>
+      {toBuy.length !== 0 && <IngredientList base={productToView} />}
       {toBuy.length === 0 && (
         <Box>
           <Typography variant="h2" className={classes.textAlign}>

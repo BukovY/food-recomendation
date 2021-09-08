@@ -32,7 +32,6 @@ export const PaginationList: FC<PaginationListProps> = ({
     <Pagination
       className={classes.root}
       variant="outlined"
-
       count={max}
       defaultPage={selected}
       onChange={(e, value) => {

@@ -30,7 +30,6 @@ const IngredientList: FC<IngredientListType> = ({ base }) => {
   const changePaginationPage = (num: number) => {
     dispatch(setPagination(num));
   };
-  // TODO не сбрасывать пагинацию при отмептке ингредиентов + добавить функцию поиска по ингредиентам
 
   return (
     <Box>
@@ -50,7 +49,7 @@ const IngredientList: FC<IngredientListType> = ({ base }) => {
             Ингредиентов для показа нет
           </Typography>
           <Typography variant="h3" className={classes.textAlign}>
-            Смените настройки или перейдите в менеджер ингредиентов
+            Смените настройки или перейдите в менеджер ингредиентов или измините параметры поиска
           </Typography>
         </Box>
       )}

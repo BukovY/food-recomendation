@@ -20,14 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f823b6b-0912-46a3-90b7-a99e11df05bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/IngredientList/IngredientList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/IngredientSearch/IngredientSearch.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/DangerPage/DangerPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/DangerPage/DangerPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/IngredientsPage/IngredientsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/IngredientsPage/IngredientsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FoodCard/FoodCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FoodCard/FoodCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Ingredient/Ingredient.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipesList/RecipesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipesList/RecipesList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ShoppingPage/ShoppingPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ShoppingPage/ShoppingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/IngredientList/IngredientList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/IngredientList/IngredientList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PaginationList/PaginationList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PaginationList/PaginationList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/userData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/userData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/userDataReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/userDataReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/functions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +64,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Homework-task" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -91,7 +95,7 @@
       <workItem from="1630950055582" duration="10175000" />
       <workItem from="1631004755624" duration="23127000" />
       <workItem from="1631079921873" duration="841000" />
-      <workItem from="1631093336725" duration="2262000" />
+      <workItem from="1631093336725" duration="5304000" />
     </task>
     <servers />
   </component>
@@ -118,14 +122,14 @@
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
     <state x="536" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1080@0.0.2560.1080" timestamp="1630955841065" />
-    <state x="586" y="295" key="FileChooserDialogImpl" timestamp="1631038602250">
+    <state x="586" y="295" key="FileChooserDialogImpl" timestamp="1631098048048">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="586" y="295" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1631038602250" />
-    <state x="526" y="276" width="585" height="530" key="find.popup" timestamp="1631097563485">
+    <state x="586" y="295" key="FileChooserDialogImpl/0.0.2560.1080@0.0.2560.1080" timestamp="1631098048048" />
+    <state x="526" y="276" width="585" height="530" key="find.popup" timestamp="1631100333665">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
-    <state x="526" y="276" width="585" height="530" key="find.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1631097563485" />
+    <state x="526" y="276" width="585" height="530" key="find.popup/0.0.2560.1080@0.0.2560.1080" timestamp="1631100333665" />
     <state x="470" y="252" key="run.anything.popup" timestamp="1631046367488">
       <screen x="0" y="0" width="2560" height="1080" />
     </state>
@@ -136,7 +140,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Pages/ShoppingPage/ShoppingPage.tsx</url>
-          <line>3</line>
+          <line>2</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
